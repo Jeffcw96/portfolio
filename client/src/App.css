@@ -14,7 +14,7 @@ html {
 .navigation-header{
   position: fixed;
   width: 100%;
-  padding: 15px 50px;
+  padding: 15px 100px;
   background-color: transparent;
   transition: all .3s
 }
@@ -58,9 +58,39 @@ html {
 .Typewriter{
   font-size: 2rem;
   color: white;
+  /* text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 2px 2px 2px rgba(206,89,55,0); */
+  text-shadow: 3px 3px 8px rgba(0, 251, 255, 0.8),7px 7px 21px rgba(13, 146, 255, 1);
+}
+
+.type-writer-container{
   width: 70%;
   margin: 0 auto;
-  min-height: 300px;
+  min-height: 250px;
+  position: relative;
+}
+
+.type-writer-body-tag,.type-writer-html-tag{
+  position: absolute;
+  color: white;
+  left: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.type-writer-body-tag.open{
+  top: -20px;
+}
+
+.type-writer-body-tag.closed{
+  bottom: -20px;
+}
+
+.type-writer-html-tag.open{
+  top: -60px;
+}
+
+.type-writer-html-tag.closed{
+  bottom: -60px;
 }
 
 .profile-pic{
@@ -74,7 +104,7 @@ html {
 
 .typewriting-text{
   width: 100%;
-  padding: 0 50px;
+  padding: 0 100px;
 }
 
 .flex{
