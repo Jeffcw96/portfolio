@@ -7,14 +7,35 @@
   font-family: 'Akaya Telivigala', cursive;
 }
 
-.navigation-header{
-  position: fixed;
-  display: flex;
-  border: 2px solid white;
-  border-radius: 10px;
-  flex-direction: column;
+html {
+  scroll-behavior: smooth;
 }
 
+.navigation-header{
+  position: fixed;
+  width: 100%;
+  padding: 15px 50px;
+  background-color: transparent;
+  transition: all .3s
+}
+
+.navigation-header.active{
+  background-color: #1f1f1f;
+}
+
+.navigation-container{
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+
+.navigation-container li{
+  color:white;
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 0 15px;
+}
 
 .navigator{
   width: 50px;
@@ -39,4 +60,31 @@
   color: white;
   width: 70%;
   margin: 0 auto;
+  min-height: 300px;
+}
+
+.profile-pic{
+  max-width: 350px;
+}
+
+.about-page{
+  min-height: 100vh;
+  background-color: rgb(15,15,15);
+}
+
+.typewriting-text{
+  width: 100%;
+  padding: 0 50px;
+}
+
+.flex{
+  display: flex;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.align-center{
+  align-items: center;
 }
