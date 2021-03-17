@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 *, *::before, *::after{
   margin: 0;
   padding:0;
   box-sizing: border-box;
   font-family: 'Akaya Telivigala', cursive;
+}
+
+a:visited{
+  color: initial;
 }
 
 html {
@@ -16,7 +21,8 @@ html {
   width: 100%;
   padding: 15px 100px;
   background-color: transparent;
-  transition: all .3s
+  transition: all .3s;
+  z-index: 9999;
 }
 
 .navigation-header.active{
@@ -115,6 +121,105 @@ html {
   justify-content: space-between;
 }
 
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.mh-380{
+  min-height: 380px;
+}
+
 .align-center{
   align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .typewriting-text{
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  .type-writer-container{
+    width: 100%;
+    order: 2;
+    display: flex;
+    align-items: center;
+  }
+
+  .Typewriter{
+    font-size: 1.1rem;
+  }
+
+  .profile-pic{
+    max-width: 200px;
+  }
+
+  .profile-pic-container{
+    margin-top: 55px;
+  }
+
+  .navigation-header{
+    padding: 15px;
+  }
+
+  .type-writer-body-tag, .type-writer-html-tag{
+    font-size: 0.8rem;
+
+  }
+
+  .type-writer-body-tag.closed{
+    bottom: 20px;
+  }
+
+  .type-writer-body-tag.open{
+    top: 20px;
+  }
+
+  .type-writer-html-tag.open{
+    top: 0;
+  }
+
+  .type-writer-html-tag.closed{
+    bottom: 0;
+  }
+}
+
+.projects-section{
+  min-height: 100vh;
+  background-color: white;
+  padding: 30px 100px;
+  font-family: 'Roboto', sans-serif;;
+}
+
+.section-header{
+  text-align: center;
+  font-size: 3rem;
+}
+
+.projects-img-container{
+  max-width: 100%;
+  cursor:pointer
+}
+
+.projects-img-container img{
+  width: 100%;
+}
+
+.project-showcase{
+  width: 30%;
+  padding: 10px;
+  margin-top: 35px;
+}
+
+.roboto-font{
+  font-family: 'Roboto', sans-serif;
+}
+
+.roboto-font.light{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
