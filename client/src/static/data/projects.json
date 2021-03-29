@@ -2,29 +2,29 @@
     {
         "id": 1,
         "projectName": "Jeff's Blog",
-        "img": "main.jpg",
-        "hoverImg": "animation_1.gif",
-        "description": "React router dom is using dynamic routing which allows us to handle our route in web app in the way that we can create and customize our own url and render based on different components"
+        "img": "blog.jpg",
+        "hoverImg": "blog_hover.gif",
+        "description": "I'm running a personal technical blog that will shares all my experieces, knowledges and skillsets"
     },
     {
         "id": 2,
         "projectName": "Web Chat App",
-        "img": "main.jpg",
-        "hoverImg": "animation_1.gif",
-        "description": "React router dom is using dynamic routing which allows us to handle our route in web app in the way that we can create and customize our own url and render based on different components"
+        "img": "web_chat.jpg",
+        "hoverImg": "web_chat.gif",
+        "description": "I made a online chating app by using MERN stack (MongoDB, ExpressJs, React and Nodejs)"
     },
     {
         "id": 3,
-        "projectName": "Web Chat App",
-        "img": "main.jpg",
-        "hoverImg": "animation_1.gif",
-        "description": "React router dom is using dynamic routing which allows us to handle our route in web app in the way that we can create and customize our own url and render based on different components"
+        "projectName": "Product Landing Page",
+        "img": "music.jpg",
+        "hoverImg": "music.gif",
+        "description": "This is my very first React Application with the integration of Paypal"
     },
     {
         "id": 4,
-        "projectName": "Web Chat App",
-        "img": "main.jpg",
-        "hoverImg": "animation_1.gif",
-        "description": "React router dom is using dynamic routing which allows us to handle our route in web app in the way that we can create and customize our own url and render based on different components"
+        "projectName": "Finance Statistic App",
+        "img": "finance.jpg",
+        "hoverImg": "finance.gif",
+        "description": "My very first try on Golang and ChartJs"
     }
 ]
