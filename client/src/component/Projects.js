@@ -8,7 +8,7 @@ export default function Projects({ projectsRef }) {
             <h2 className="section-header">Projects</h2>
             <div className="flex flex-wrap space-between">
                 {projects.map((project, ind) => (
-                    <div className="project-showcase">
+                    <div className="project-showcase" key={ind}>
                         <Project project={project} />
                     </div>
                 ))}

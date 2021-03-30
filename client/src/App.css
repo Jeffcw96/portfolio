@@ -19,10 +19,10 @@ html {
 .navigation-header{
   position: fixed;
   width: 100%;
-  padding: 15px 100px;
+  padding: 18px 100px;
   background-color: transparent;
   transition: all .3s;
-  z-index: 9999;
+  z-index: 999;
 }
 
 .navigation-header.active{
@@ -137,6 +137,39 @@ html {
   align-items: center;
 }
 
+.arrow-right {
+  background-color: #08c4c4;
+  box-shadow: 0 0 3px 2px rgb(0 0 0 / 80%);
+  height: 175px;
+  left: -115px;
+  position: absolute;
+  top: -55px;
+  width: 0;
+  -webkit-transform: rotate(-45deg);
+  transition: all .8s;
+}
+
+.arrow-right span {
+  color: #f5f5f5;
+  font-family: sans-serif;
+  font-size: 1.005em;
+  left: 90px;
+  top: 100px;
+  position: absolute;
+  width: 150px;
+  font-size: 12px;
+  text-shadow: 3px 3px 8px rgb(0 0 0 / 80%);
+  opacity:  0;
+}
+
+.arrow-right.active{
+  width: 300px;
+}
+
+.arrow-right.active span{
+  opacity: 1;
+}
+
 @media screen and (max-width: 600px) {
   .typewriting-text{
     flex-direction: column;
@@ -186,6 +219,11 @@ html {
   .type-writer-html-tag.closed{
     bottom: 0;
   }
+
+  .arrow-right.active{
+    width: 0 !important;
+  }
+
 }
 
 .projects-section{
@@ -262,4 +300,44 @@ html {
 
 .contact-err-msg{
   color: red;
+}
+
+@media screen and (max-width: 600px) {
+
+  .projects-section{
+    padding: 25px 5px;
+  }
+
+  .project-showcase{
+    width: 100%;
+  }
+
+  .projects-img-container img {
+    width: 100%;
+    height: initial;
+    object-fit: contain;
+  }
+
+  .projects-img-container,.mh-380{
+    min-height:initial;
+  }
+
+  .projects-img-container{
+    margin-bottom: 15px;
+  }
+  
+  .roboto-font.light a{
+    margin-top: 5px;
+    display: block;
+  }
+
+  .contact-form{
+    width: 100%;
+  }
+
+  .contact-form input, .contact-form textarea{
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
 }

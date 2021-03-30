@@ -5,7 +5,6 @@ export default function Project({ project }) {
     const history = useHistory()
     const defaultImg = require("../static/data/showcase/" + project.img).default
     const hoverImg = require("../static/data/showcase/" + project.hoverImg).default
-    console.log(hoverImg)
     const [img, setImg] = useState(defaultImg)
 
     return (
