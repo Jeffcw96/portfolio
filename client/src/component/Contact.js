@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
+import githubImg from '../static/images/github.png'
+import linkedinImg from '../static/images/linkedin.png'
 
-export default function Contact({ contactRef }) {
+export default function Contact({ contactRef, visible, iconLoad }) {
     const SERVICE_ID = 'service_tbn3tkb';
     const TEMPLATE_ID = 'portfolio_contact';
     const USER_ID = 'user_QRzuQF5Ef39qfTkF9KVDN'
-
+    const GITHUB_LINK = 'https://github.com/Jeffcw96'
+    const LINKEDIN_LINK = 'https://www.linkedin.com/in/jeff-chang-7461b119a/'
 
     const [contactInfo, setContactInfo] = useState({
         name: "", email: "", subject: "", message: ""
@@ -67,7 +70,7 @@ export default function Contact({ contactRef }) {
     }
 
     return (
-        <div style={{ minHeight: '80vh', background: "rgb(246 246 246)" }} className="projects-section" ref={contactRef}>
+        <div style={{ minHeight: '80vh', background: "rgb(246 246 246)" }} className="projects-section contact-page" ref={contactRef}>
             <h2 className="section-header">Contact</h2>
             <form onSubmit={contactMe}>
                 <div>
@@ -104,6 +107,15 @@ export default function Contact({ contactRef }) {
                     </div>
                 </div>
             </form>
+
+            <a href={GITHUB_LINK} target="_blank">
+                <img src={githubImg} className={`contact-icon github ${iconLoad ? 'active' : null}`} />
+            </a>
+            <a href={LINKEDIN_LINK} target="_blank">
+                <img src={linkedinImg} className={`contact-icon linkedin ${iconLoad ? 'active' : null}`} />
+            </a>
+
+
         </div>
     )
 }

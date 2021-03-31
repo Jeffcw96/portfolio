@@ -302,6 +302,38 @@ html {
   color: red;
 }
 
+
+.contact-page{
+  position: relative;
+}
+
+.contact-icon{
+  position: absolute;
+ 
+  bottom: -500px;
+  cursor: pointer;
+  width: 325px;
+  transition: all .5s;
+}
+
+.contact-icon.linkedin{
+  right: -55px;
+  transform: rotate(-45deg);
+}
+
+.contact-icon.github{
+  left: -35px;
+  transform: rotate(45deg);
+}
+
+.contact-icon.active{
+ bottom: -40px;
+}
+
+.contact-icon.active:hover{
+  width:350px
+}
+
 @media screen and (max-width: 600px) {
 
   .projects-section{

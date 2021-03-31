@@ -1,10 +1,37 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import Projects from './Projects'
 import About from './About'
 import Contact from './Contact'
 import '../App.css'
 
+function useOnScreen(options) {
+    const [ref, setRef] = useState(null);
+    const [visible, setVisible] = useState(false)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+            console.log("entry.isIntersecting", entry.isIntersecting)
+            setVisible(entry.isIntersecting)
+        }, options)
+
+        if (ref) {
+            observer.observe(ref)
+        }
+
+        return () => {
+            if (ref) {
+                observer.unobserve(ref)
+            }
+        }
+    }, [ref, options])
+
+    return [setRef, visible]
+}
+
+
 export default function Main() {
+    const [setRef, visible] = useOnScreen({ threshold: 1, rootMargin: "0px 0px 150px 0px" })
+    const [iconLoad, setIconLoad] = useState(false)
     const [navbar, setNavbar] = useState(false)
     const aboutRef = useRef()
     const projectsRef = useRef()
@@ -17,6 +44,13 @@ export default function Main() {
             setNavbar(false)
         }
     }
+
+    useEffect(() => {
+        if (visible && !iconLoad) {
+            setIconLoad(true)
+        }
+
+    }, [visible])
 
     window.addEventListener('scroll', changeNavColor)
 
@@ -35,8 +69,11 @@ export default function Main() {
             <div ref={projectsRef}>
                 <Projects />
             </div>
-            <div ref={contactRef}>
-                <Contact />
+            <div ref={contactRef} style={{ overflow: "hidden" }}>
+                {/* React Ref accept useRef Dom and function, this case we pass setState function from useState */}
+
+                <Contact visible={visible} iconLoad={iconLoad} />
+                <div ref={setRef}></div>
             </div>
         </>
     )
