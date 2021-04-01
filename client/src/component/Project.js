@@ -8,7 +8,7 @@ export default function Project({ project }) {
     const [img, setImg] = useState(defaultImg)
 
     return (
-        <div className="flex flex-column space-between mh-380">
+        <div className="flex flex-column space-between mh-380 transition-fade" >
             <div className="projects-img-container">
                 <img src={img} onMouseEnter={() => { setImg(hoverImg) }}
                     onMouseLeave={() => { setImg(defaultImg) }}
