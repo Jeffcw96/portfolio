@@ -1,0 +1,16 @@
+{
+    "id": 1,
+    "projectName": "Jeff's Blog",
+    "images": [
+        "main.jpg",
+        "content.jpg",
+        "search.jpg",
+        "tags.jpg"
+    ],
+    "description": "I'm running a personal technical blog that will shares all my experieces, knowledges and skillsets",
+    "tags": [
+        "Hugo (Static Site Generator)",
+        "AWS",
+        "Golang"
+    ]
+}
