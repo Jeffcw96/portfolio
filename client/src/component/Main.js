@@ -66,7 +66,7 @@ export default function Main() {
             <div ref={aboutRef}>
                 <About />
             </div>
-            <div ref={projectsRef}>
+            <div ref={projectsRef} id="projects">
                 <Projects />
             </div>
             <div ref={contactRef} style={{ overflow: "hidden" }}>

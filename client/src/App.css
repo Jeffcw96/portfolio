@@ -137,6 +137,10 @@ html {
   align-items: center;
 }
 
+.space-center{
+  justify-content: center;
+}
+
 .arrow-right {
   background-color: #08c4c4;
   box-shadow: 0 0 3px 2px rgb(0 0 0 / 80%);
@@ -347,11 +351,62 @@ html {
 
 .project-detail-page{
   min-height: 100vh;
-
+  padding: 20px;
 }
 
+.project-detail-slider-container{
+  max-width: 1000px;
+  margin: 15px auto;
+  position: relative;
+}
+
+.swiper-container-thumbs .swiper-slide{
+  opacity: 0.5;
+}
+
+.swiper-container-thumbs .swiper-slide-thumb-active{
+  opacity: 1;
+}
+
+.swiper-button-next::after {
+  content: ">" !important;
+  font-size: 35px !important;
+  font-weight: bold !important;
+  font-family: sans-serif !important;
+}
+
+.swiper-button-prev::after {
+  content: "<" !important;
+  font-size: 35px !important;
+  font-weight: bold !important;
+  font-family: sans-serif !important;
+}
+
+.to-home-page-icon img{
+  max-width: 30px;
+}
+
+.to-home-page-icon{
+  position: absolute;
+  top: -50px;
+  left: 0;
+}
+
+@media screen and (max-width: 1600px){
+  .projects-img-container img{
+    height: 265px;
+  }
+
+  .projects-img-container{
+    min-height:300px ;
+  }
+}
 
 @media screen and (max-width: 600px) {
+  .swiper-button-prev::after, .swiper-button-next::after, #thumbs{
+    display: none;
+  }
+
   .contact-icon.linkedin,.contact-icon.github{
     transform: rotate(0);
     width: 50px;
