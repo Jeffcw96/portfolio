@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination, Controller, Thumbs, Autoplay } from 'swiper'
 import 'swiper/swiper-bundle.css'
 import backIcon from '../static/images/back-arrow.svg'
-import { Link } from 'react-router-dom'
 
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs, Autoplay]);
 export default function ProjectDetails({ match }) {
+    const history = useHistory()
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     let slides = [];
     let thumbs = []
@@ -31,12 +32,15 @@ export default function ProjectDetails({ match }) {
         )
     }
 
+    function toProjectsSection(e) {
+        e.preventDefault()
+        history.push({
+            pathname: '/',
+            state: 'project'
+        })
+    }
 
-    console.log("projectImages", projectImages)
-    console.log("projectInfo", projectInfo)
-    // const defaultImg = require("../static/data/projects/" +projectId).default
-    // const hoverImg = require("../static/data/showcase/" + project.hoverImg).default
-    console.log("match", match)
+
     return (
         <div className="project-detail-page">
             <div style={{ textAlign: 'center' }}>
@@ -44,9 +48,9 @@ export default function ProjectDetails({ match }) {
             </div>
             <div className="project-detail-slider-container" style={{ display: "flex" }}>
                 <div className="to-home-page-icon">
-                    <Link to={"/#projects"}>
+                    <a href="javascript;" onClick={(e) => toProjectsSection(e)}>
                         <img src={backIcon} alt={"to previous page"} />
-                    </Link>
+                    </a>
                 </div>
                 <Swiper
                     id="thumbs"
@@ -77,6 +81,18 @@ export default function ProjectDetails({ match }) {
                 >
                     {slides}
                 </Swiper>
+            </div>
+            <div className="project-detail-descriptions-container">
+                <div className="project-detail-component"><span>Descriptions :</span><span>{projectInfo.description}</span></div>
+                <div className="project-detail-component" ><span>Tags :</span>
+                    <div >
+                        {projectInfo.tags.map(tagInfo => (
+                            <span className="project-detail-tag" style={{ backgroundColor: tagInfo.backgroundColor, color: tagInfo.color }}>{tagInfo.tag}</span>
+                        ))}
+                    </div>
+                </div>
+                <div className="project-detail-component"><span>Conclusions : </span><span>{projectInfo.conclusion}</span></div>
+                <div className="project-detail-component"><span>Demo at : </span><a href={projectInfo.slug} target="_blank">{projectInfo.slug}</a></div>
             </div>
         </div>
 

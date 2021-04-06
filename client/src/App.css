@@ -352,6 +352,7 @@ html {
 .project-detail-page{
   min-height: 100vh;
   padding: 20px;
+  background-color: #f6fdff;
 }
 
 .project-detail-slider-container{
@@ -361,7 +362,7 @@ html {
 }
 
 .swiper-container-thumbs .swiper-slide{
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .swiper-container-thumbs .swiper-slide-thumb-active{
@@ -391,6 +392,37 @@ html {
   top: -50px;
   left: 0;
 }
+
+.project-detail-descriptions-container{
+  max-width: 1000px;
+  margin: 50px auto 20px;
+}
+
+.project-detail-component{
+  margin: 15px 0;
+  font-size: 1.2rem;
+  display: flex;
+}
+
+.project-detail-component span:nth-child(1){
+  width: 15%;
+}
+
+.project-detail-component span:last-child{
+  width: 85%;
+}
+
+.project-detail-tag:not(:first-child){
+  margin: 0 5px;
+}
+
+.project-detail-tag{
+  padding: 5px 8px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 @media screen and (max-width: 1600px){
   .projects-img-container img{

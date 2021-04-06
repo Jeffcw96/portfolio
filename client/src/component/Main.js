@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Projects from './Projects'
 import About from './About'
 import Contact from './Contact'
@@ -6,7 +7,8 @@ import '../App.css'
 
 function useOnScreen(options) {
     const [ref, setRef] = useState(null);
-    const [visible, setVisible] = useState(false)
+    const [visible, setVisible] = useState(false);
+
 
     useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
@@ -28,8 +30,8 @@ function useOnScreen(options) {
     return [setRef, visible]
 }
 
-
 export default function Main() {
+    const location = useLocation()
     const [setRef, visible] = useOnScreen({ threshold: 1, rootMargin: "0px 0px 150px 0px" })
     const [iconLoad, setIconLoad] = useState(false)
     const [navbar, setNavbar] = useState(false)
@@ -51,6 +53,13 @@ export default function Main() {
         }
 
     }, [visible])
+
+    useEffect(() => {
+        if (location.state === "project") {
+            projectsRef.current.scrollIntoView({ behavior: 'smooth' })
+        }
+    }, [location])
+
 
     window.addEventListener('scroll', changeNavColor)
 
