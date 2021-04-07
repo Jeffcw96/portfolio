@@ -1,0 +1,31 @@
+{
+    "id": 3,
+    "projectName": "Music Education Platform",
+    "images": [
+        "main.jpg",
+        "features.jpg",
+        "account.jpg",
+        "plans.jpg",
+        "payment.jpg"
+    ],
+    "description": "I'm running a personal technical blog that will shares all my experieces, knowledges and skillsets",
+    "tags": [
+        {
+            "tag": "Hugo (Static Site Generator)",
+            "backgroundColor": "#0E639C",
+            "color": "#FFFFFF"
+        },
+        {
+            "tag": "AWS",
+            "backgroundColor": "#C21A00",
+            "color": "#FFFFFF"
+        },
+        {
+            "tag": "Golang",
+            "backgroundColor": "#002050",
+            "color": "#FFFFFF"
+        }
+    ],
+    "conclusion": "Throughout this side project, I learn how to deploy a web application in AWS using (S3, Route53, CloudFront and Certificate Manager",
+    "slug": "https://musicmernstackapp.herokuapp.com/"
+}

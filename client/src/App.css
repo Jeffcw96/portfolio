@@ -361,6 +361,10 @@ html {
   position: relative;
 }
 
+.swiper-container-thumbs{
+  cursor: pointer;
+}
+
 .swiper-container-thumbs .swiper-slide{
   opacity: 0.3;
 }

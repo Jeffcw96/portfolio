@@ -8,14 +8,14 @@
     },
     {
         "id": 2,
-        "projectName": "Web Chat App",
+        "projectName": "Connect You & Me",
         "img": "web_chat.jpg",
         "hoverImg": "web_chat.gif",
         "description": "I made a online chating app by using MERN stack (MongoDB, ExpressJs, React and Nodejs)"
     },
     {
         "id": 3,
-        "projectName": "Product Landing Page",
+        "projectName": "Music Education Platform",
         "img": "music.jpg",
         "hoverImg": "music.gif",
         "description": "This is my very first React Application in product landing page with the integration of Paypal"

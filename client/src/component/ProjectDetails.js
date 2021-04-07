@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination, Controller, Thumbs, Autoplay } from 'swiper'
 import 'swiper/swiper-bundle.css'
@@ -21,7 +22,7 @@ export default function ProjectDetails({ match }) {
 
     for (let i = 0; i < projectImages.length; i++) {
         slides.push(
-            <SwiperSlide key={`slide-${i}`}>
+            <SwiperSlide key={`slide-${i}`} style={{ display: "flex", alignItems: "center" }}>
                 <img src={projectImages[i]} alt={`Slide image ${i}`} style={{ width: '100%' }} />
             </SwiperSlide>
         )
@@ -43,6 +44,9 @@ export default function ProjectDetails({ match }) {
 
     return (
         <div className="project-detail-page">
+            <Helmet>
+                <link rel="prefetch" href={projectInfo.slug} />
+            </Helmet>
             <div style={{ textAlign: 'center' }}>
                 <h1>{projectInfo.projectName}</h1>
             </div>
