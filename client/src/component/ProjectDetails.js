@@ -89,7 +89,7 @@ export default function ProjectDetails({ match }) {
             <div className="project-detail-descriptions-container">
                 <div className="project-detail-component"><span>Descriptions :</span><span>{projectInfo.description}</span></div>
                 <div className="project-detail-component" ><span>Tags :</span>
-                    <div >
+                    <div className="project-tag-container">
                         {projectInfo.tags.map(tagInfo => (
                             <span className="project-detail-tag" style={{ backgroundColor: tagInfo.backgroundColor, color: tagInfo.color }}>{tagInfo.tag}</span>
                         ))}
@@ -97,6 +97,7 @@ export default function ProjectDetails({ match }) {
                 </div>
                 <div className="project-detail-component"><span>Conclusions : </span><span>{projectInfo.conclusion}</span></div>
                 <div className="project-detail-component"><span>Demo at : </span><a href={projectInfo.slug} target="_blank">{projectInfo.slug}</a></div>
+                <div className="project-detail-component"><span>Source code : </span><a href={projectInfo.source} target="_blank">{projectInfo.source}</a></div>
             </div>
         </div>
 

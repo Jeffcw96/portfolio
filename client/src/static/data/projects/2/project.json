@@ -12,35 +12,36 @@
     "tags": [
         {
             "tag": "React",
-            "backgroundColor": "#0E639C",
-            "color": "#FFFFFF"
+            "backgroundColor": "#000000",
+            "color": "#09D9FD"
         },
         {
             "tag": "Nodejs",
-            "backgroundColor": "#C21A00",
-            "color": "#FFFFFF"
-        },
-        {
-            "tag": "MongoDB",
-            "backgroundColor": "#002050",
+            "backgroundColor": "#44883E",
             "color": "#FFFFFF"
         },
         {
             "tag": "Express",
-            "backgroundColor": "#002050",
-            "color": "#FFFFFF"
+            "backgroundColor": "#F7DF1E",
+            "color": "#000000"
+        },
+        {
+            "tag": "MongoDB",
+            "backgroundColor": "#4AA64A",
+            "color": "#474749"
         },
         {
             "tag": "AWS",
-            "backgroundColor": "#002050",
+            "backgroundColor": "#EF931E",
             "color": "#FFFFFF"
         },
         {
             "tag": "Google OAuth",
-            "backgroundColor": "#002050",
+            "backgroundColor": "#E34133",
             "color": "#FFFFFF"
         }
     ],
     "conclusion": "Throughout this side project, I learn how to deploy a web application in AWS using (S3, Route53, CloudFront and Certificate Manager",
-    "slug": "https://jeffchatapp.herokuapp.com/"
+    "slug": "https://jeffchatapp.herokuapp.com/",
+    "source": "https://github.com/Jeffcw96/mern-chat-app"
 }

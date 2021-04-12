@@ -11,20 +11,21 @@
     "tags": [
         {
             "tag": "Hugo (Static Site Generator)",
-            "backgroundColor": "#0E639C",
+            "backgroundColor": "#FF4088",
             "color": "#FFFFFF"
         },
         {
             "tag": "AWS",
-            "backgroundColor": "#C21A00",
+            "backgroundColor": "#EF931E",
             "color": "#FFFFFF"
         },
         {
-            "tag": "Golang",
-            "backgroundColor": "#002050",
-            "color": "#FFFFFF"
+            "tag": "Go",
+            "backgroundColor": "#7FD5EA",
+            "color": "#000000"
         }
     ],
     "conclusion": "Throughout this side project, I learn how to deploy a web application in AWS using (S3, Route53, CloudFront and Certificate Manager",
-    "slug": "https://jeffdevslife.com"
+    "slug": "https://jeffdevslife.com",
+    "source": "https://github.com/Jeffcw96/blog-lastest-theme"
 }

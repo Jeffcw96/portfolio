@@ -1,0 +1,26 @@
+{
+    "id": 4,
+    "projectName": "Daily Expenses Tracker",
+    "images": [
+        "top-section.jpg",
+        "add_expenses.jpg",
+        "statistic.jpg",
+        "summary.jpg"
+    ],
+    "description": "I created a online chating app",
+    "tags": [
+        {
+            "tag": "Go",
+            "backgroundColor": "#7FD5EA",
+            "color": "#000000"
+        },
+        {
+            "tag": "Redis",
+            "backgroundColor": "#D12B1F",
+            "color": "#FFFFFF"
+        }
+    ],
+    "conclusion": "Throughout this side project, I learn how to deploy a web application in AWS using (S3, Route53, CloudFront and Certificate Manager",
+    "slug": "https://jeff-finance-app.herokuapp.com/",
+    "source": "https://github.com/Jeffcw96/FInancial-statistic-web-app"
+}

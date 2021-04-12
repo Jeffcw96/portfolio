@@ -6,26 +6,32 @@
         "features.jpg",
         "account.jpg",
         "plans.jpg",
-        "payment.jpg"
+        "payment3.jpg"
     ],
     "description": "I'm running a personal technical blog that will shares all my experieces, knowledges and skillsets",
     "tags": [
         {
-            "tag": "Hugo (Static Site Generator)",
-            "backgroundColor": "#0E639C",
+            "tag": "React",
+            "backgroundColor": "#000000",
+            "color": "#09D9FD"
+        },
+        {
+            "tag": "Nodejs",
+            "backgroundColor": "#44883E",
             "color": "#FFFFFF"
         },
         {
-            "tag": "AWS",
-            "backgroundColor": "#C21A00",
-            "color": "#FFFFFF"
+            "tag": "Express",
+            "backgroundColor": "#F7DF1E",
+            "color": "#000000"
         },
         {
-            "tag": "Golang",
-            "backgroundColor": "#002050",
-            "color": "#FFFFFF"
+            "tag": "MongoDB",
+            "backgroundColor": "#4AA64A",
+            "color": "#474749"
         }
     ],
     "conclusion": "Throughout this side project, I learn how to deploy a web application in AWS using (S3, Route53, CloudFront and Certificate Manager",
-    "slug": "https://musicmernstackapp.herokuapp.com/"
+    "slug": "https://musicmernstackapp.herokuapp.com/",
+    "source": "https://github.com/Jeffcw96/music-education-app"
 }
