@@ -48,7 +48,7 @@ export default function ProjectDetails({ match }) {
                 <link rel="prefetch" href={projectInfo.slug} />
             </Helmet>
             <div style={{ textAlign: 'center' }}>
-                <h1>{projectInfo.projectName}</h1>
+                <h1 className='project-detail-title'>{projectInfo.projectName}</h1>
             </div>
             <div className="project-detail-slider-container" style={{ display: "flex" }}>
                 <div className="to-home-page-icon">
@@ -81,21 +81,24 @@ export default function ProjectDetails({ match }) {
                         console.log('Slide index changed to: ', swiper.activeIndex);
                     }}
                     onReachEnd={() => console.log('Swiper end reached')}
-                    style={{ width: '85%' }}
+                    style={{ width: '90%' }}
                 >
                     {slides}
                 </Swiper>
             </div>
             <div className="project-detail-descriptions-container">
-                <div className="project-detail-component"><span>Descriptions :</span><span>{projectInfo.description}</span></div>
+                <div className="project-detail-component"><span>Descriptions :</span>
+                    <span>{projectInfo.descriptions.map(description =>(
+                        <div style={{marginBottom:"5px"}}>{description}</div>
+                    ))}</span>                    
+                </div>
                 <div className="project-detail-component" ><span>Tags :</span>
                     <div className="project-tag-container">
                         {projectInfo.tags.map(tagInfo => (
                             <span className="project-detail-tag" style={{ backgroundColor: tagInfo.backgroundColor, color: tagInfo.color }}>{tagInfo.tag}</span>
                         ))}
                     </div>
-                </div>
-                <div className="project-detail-component"><span>Conclusions : </span><span>{projectInfo.conclusion}</span></div>
+                </div>                
                 <div className="project-detail-component"><span>Demo at : </span><a href={projectInfo.slug} target="_blank">{projectInfo.slug}</a></div>
                 <div className="project-detail-component"><span>Source code : </span><a href={projectInfo.source} target="_blank">{projectInfo.source}</a></div>
             </div>

@@ -7,7 +7,10 @@
         "statistic.jpg",
         "summary.jpg"
     ],
-    "description": "I created a online chating app",
+    "descriptions":[
+        "This is my very first side project which helps me to familiar my full-time job stack which are Go and Redis",
+        "It also uses ChartJs library to dynamically generate and visualize the data in graphical manner."
+    ],
     "tags": [
         {
             "tag": "Go",
@@ -20,7 +23,6 @@
             "color": "#FFFFFF"
         }
     ],
-    "conclusion": "Throughout this side project, I learn how to deploy a web application in AWS using (S3, Route53, CloudFront and Certificate Manager",
     "slug": "https://jeff-finance-app.herokuapp.com/",
     "source": "https://github.com/Jeffcw96/FInancial-statistic-web-app"
 }

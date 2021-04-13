@@ -8,7 +8,11 @@
         "plans.jpg",
         "payment3.jpg"
     ],
-    "description": "I'm running a personal technical blog that will shares all my experieces, knowledges and skillsets",
+    "descriptions":[
+        "This is my very first MERN stack project which gets me understand the basicc React Hooks like useState, useEffect, useRef and etc",
+        "The intention of doing this project is to gets my hand dirty into React framework as it's becoming more and more popular in the front-end devs",
+        "I was managed to understand how React Router works as well as integrate a Paypal Payment into this application"
+    ],
     "tags": [
         {
             "tag": "React",
@@ -31,7 +35,6 @@
             "color": "#474749"
         }
     ],
-    "conclusion": "Throughout this side project, I learn how to deploy a web application in AWS using (S3, Route53, CloudFront and Certificate Manager",
     "slug": "https://musicmernstackapp.herokuapp.com/",
     "source": "https://github.com/Jeffcw96/music-education-app"
 }

@@ -7,7 +7,11 @@
         "search.jpg",
         "tags.jpg"
     ],
-    "description": "I'm running a personal technical blog that will shares all my experieces, knowledges and skillsets",
+    "descriptions":[
+        "I'm running a personal technical blog that shares all my experieces, knowledges and skillsets. This project is hosted by using AWS technology (S3, Route53, CloudFront and Certificate Manager).",
+        "The main purpose of starting this blog is to at least record down the obstacles, common mistake I've made in the past so that next time I can straight away make a quick response when facing the same problem.",
+        "I also hope this blog able to help the developer by providing them some technical guideline and solutions on how to tackle the problem."
+    ], 
     "tags": [
         {
             "tag": "Hugo (Static Site Generator)",
@@ -25,7 +29,6 @@
             "color": "#000000"
         }
     ],
-    "conclusion": "Throughout this side project, I learn how to deploy a web application in AWS using (S3, Route53, CloudFront and Certificate Manager",
     "slug": "https://jeffdevslife.com",
     "source": "https://github.com/Jeffcw96/blog-lastest-theme"
 }

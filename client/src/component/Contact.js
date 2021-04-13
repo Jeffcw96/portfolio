@@ -100,7 +100,7 @@ export default function Contact({ contactRef, visible, iconLoad }) {
                         <div className="contact-err-msg">{errorMessage.message}</div>
                     </div>
                     <div className="contact-form">
-                        <input type="submit" placeholder="Your Message" name="Send Message" />
+                        <input type="submit" value="Send" name="Send Message" />
                     </div>
                     <div className="contact-form">
                         <p className="success-msg">{successMsg}</p>

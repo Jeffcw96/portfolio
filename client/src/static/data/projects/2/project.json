@@ -1,6 +1,6 @@
 {
     "id": 2,
-    "projectName": "Jeff's Blog",
+    "projectName": "Connect You & Me",
     "images": [
         "login_screen.jpg",
         "google_login.jpg",
@@ -8,7 +8,12 @@
         "add_contact.jpg",
         "profile.jpg"
     ],
-    "description": "I created a online chating app",
+    "descriptions":[
+        "The purpose of creating this project is to understand how socket actually work between our client and server",
+        "It was created by using MERN stack. Other than that, some API such as AWS S3, AWS SES and Google Login also being integrated into this project",
+        "Throughout this project creation, I also managed to understand more on React Hooks such as useReducer and useContext for managing the complex state.",
+        "I also figured out it was quite easy to integrate the cloud technologies from AWS into our custom application"
+    ], 
     "tags": [
         {
             "tag": "React",
@@ -41,7 +46,6 @@
             "color": "#FFFFFF"
         }
     ],
-    "conclusion": "Throughout this side project, I learn how to deploy a web application in AWS using (S3, Route53, CloudFront and Certificate Manager",
     "slug": "https://jeffchatapp.herokuapp.com/",
     "source": "https://github.com/Jeffcw96/mern-chat-app"
 }
