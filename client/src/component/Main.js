@@ -33,12 +33,13 @@ function useOnScreen(options) {
 export default function Main() {
     const location = useLocation()
     const [setRef, visible] = useOnScreen({ threshold: 1, rootMargin: "0px 0px 150px 0px" })
+    const [mobileNavVisible, setMobileNavVisible] = useState(false)
     const [iconLoad, setIconLoad] = useState(false)
     const [navbar, setNavbar] = useState(false)
     const aboutRef = useRef()
     const projectsRef = useRef()
     const contactRef = useRef()
-
+    const navbarElement = useRef()
     const changeNavColor = () => {
         if (window.scrollY >= 80) {
             setNavbar(true)
@@ -60,16 +61,55 @@ export default function Main() {
         }
     }, [location])
 
+    useEffect(() => {
+        if (mobileNavVisible) {
+            navbarElement.current.classList.add("mobile-active");
+            document.body.style.overflow = "hidden"
+        }
+
+        return () => {
+            navbarElement.current.classList.remove("mobile-active");
+            document.body.style.overflow = "initial"
+        }
+    }, [mobileNavVisible])
+
+    function navigationScroll(target) {
+        navbarElement.current.classList.remove("mobile-active");
+        document.body.style.overflow = "initial";
+        setMobileNavVisible(false)
+        if (target === "about") {
+            aboutRef.current.scrollIntoView({ behavior: 'smooth' })
+            return
+        }
+
+        if (target === "project") {
+            projectsRef.current.scrollIntoView({ behavior: 'smooth' })
+            return
+        }
+
+        if (target === "contact") {
+            contactRef.current.scrollIntoView({ behavior: 'smooth' })
+            return
+        }
+    }
 
     window.addEventListener('scroll', changeNavColor)
 
     return (
         <>
-            <div className={navbar ? 'navigation-header active' : 'navigation-header'}>
+            <div className={navbar ? 'mobile-nav active' : 'mobile-nav'}>
+                <div id="nav-icon" className={mobileNavVisible ? 'open' : null} onClick={() => setMobileNavVisible(!mobileNavVisible)}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div className={navbar ? 'navigation-header active' : 'navigation-header'} ref={navbarElement}>
                 <ul className="navigation-container">
-                    <li onClick={() => aboutRef.current.scrollIntoView({ behavior: 'smooth' })}>About Me</li>
-                    <li onClick={() => projectsRef.current.scrollIntoView({ behavior: 'smooth' })}>Projects</li>
-                    <li onClick={() => contactRef.current.scrollIntoView({ behavior: 'smooth' })}>Contact</li>
+                    <li onClick={() => navigationScroll('about')}>About Me</li>
+                    <li onClick={() => navigationScroll('project')}>Projects</li>
+                    <li onClick={() => navigationScroll('contact')}>Contact</li>
                 </ul>
             </div>
             <div ref={aboutRef}>
