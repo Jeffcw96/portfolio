@@ -4,6 +4,7 @@ import Projects from './Projects'
 import About from './About'
 import Contact from './Contact'
 import '../App.css'
+import main from '../static/main-img.jpg'
 
 function useOnScreen(options) {
     const [ref, setRef] = useState(null);
@@ -113,9 +114,12 @@ export default function Main() {
                 </ul>
             </div>
             <div ref={aboutRef}>
-                <About />
+                {/* <About /> */}
+                <div className="parallax" style={{ backgroundImage: `url(${main})` }}>
+
+                </div>
             </div>
-            <div ref={projectsRef} id="projects">
+            <div ref={projectsRef} id="projects" style={{ paddingTop: "35px" }}>
                 <Projects />
             </div>
             <div ref={contactRef} style={{ overflow: "hidden" }}>
