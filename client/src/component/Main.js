@@ -5,6 +5,7 @@ import About from './About'
 import Contact from './Contact'
 import '../App.css'
 import main from '../static/main-img.jpg'
+import { Link, Events } from 'react-scroll'
 
 function useOnScreen(options) {
     const [ref, setRef] = useState(null);
@@ -74,25 +75,15 @@ export default function Main() {
         }
     }, [mobileNavVisible])
 
-    function navigationScroll(target) {
+    function navigationScroll() {
         navbarElement.current.classList.remove("mobile-active");
         document.body.style.overflow = "initial";
         setMobileNavVisible(false)
-        if (target === "about") {
-            aboutRef.current.scrollIntoView({ behavior: 'smooth' })
-            return
-        }
-
-        if (target === "project") {
-            projectsRef.current.scrollIntoView({ behavior: 'smooth' })
-            return
-        }
-
-        if (target === "contact") {
-            contactRef.current.scrollIntoView({ behavior: 'smooth' })
-            return
-        }
     }
+
+    Events.scrollEvent.register('end', function (to, element) {
+        navigationScroll()
+    });
 
     window.addEventListener('scroll', changeNavColor)
 
@@ -108,21 +99,31 @@ export default function Main() {
             </div>
             <div className={navbar ? 'navigation-header active' : 'navigation-header'} ref={navbarElement}>
                 <ul className="navigation-container">
-                    <li onClick={() => navigationScroll('about')}>About Me</li>
-                    <li onClick={() => navigationScroll('project')}>Projects</li>
-                    <li onClick={() => navigationScroll('contact')}>Contact</li>
+                    <li><Link to="about" smooth={true} duration={1000} >About Me</Link></li>
+                    <li><Link to="projects" smooth={true} duration={1000} >Projects</Link></li>
+                    <li><Link to="contact" smooth={true} duration={1000} >Contact</Link></li>
                 </ul>
             </div>
-            <div ref={aboutRef}>
+            <div ref={aboutRef} id="about">
                 {/* <About /> */}
                 <div className="parallax" style={{ backgroundImage: `url(${main})` }}>
-
+                    <div class='intro'>
+                        <h1>Hello, I'm <span>Jeff Chang</span>. <br />I'm a full-stack web developer</h1>
+                    </div>
+                    <div class="view-project">
+                        <Link to="projects" smooth={true} duration={500}>
+                            <h2>View my work</h2>
+                            <svg class="arrows">
+                                <path stroke-linecap="round" class="a1" d="M0 0 L20 22 L40 0"></path>
+                            </svg>
+                        </Link>
+                    </div>
                 </div>
             </div>
-            <div ref={projectsRef} id="projects" style={{ paddingTop: "35px" }}>
+            <div ref={projectsRef} id="projects">
                 <Projects />
             </div>
-            <div ref={contactRef} style={{ overflow: "hidden" }}>
+            <div ref={contactRef} style={{ overflow: "hidden" }} id="contact">
                 {/* React Ref accept useRef Dom and function, this case we pass setState function from useState */}
 
                 <Contact visible={visible} iconLoad={iconLoad} />
