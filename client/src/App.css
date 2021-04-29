@@ -384,7 +384,7 @@ body {
   
   .navigation-header.mobile-active{
     transform: translateX(0);
-    z-index: 1;
+    z-index: 998;
   }
 
   .navigation-container{
@@ -428,10 +428,14 @@ body {
 
 }
 
+.mt-50{
+  margin-top: 50px;
+}
+
 .projects-section{
   min-height: 100vh;
   background-color: white;
-  padding: 65px 100px 30px;
+  padding: 65px 20px 30px;
   font-family: 'Roboto', sans-serif;;
 }
 
@@ -440,21 +444,50 @@ body {
   font-size: 3rem;
 }
 
+.mw95-center{
+  max-width: 95%;
+  margin: 0 auto;
+}
+
 .projects-img-container{
-  max-width: 100%;
   cursor:pointer;
-  min-height: 320px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.on-hover-project-container{
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.on-hover-title{
+  transform: translateY(300px);
+  transition: all .3s;
+}
+
+.on-hover-learn-more{
+  transform: translateY(-300px);
+  transition: all .3s;
 }
 
 .projects-img-container img{
   width: 100%;
-  height: 300px;
+  height: auto;
 }
 
 .project-showcase{
-  width: 30%;
-  padding: 10px;
-  margin-top: 35px;
+  width: 33.33%;
+  background: #f9f2f2;
+  border: 1px solid rgb(228 228 228);
+}
+
+.project-showcase:first-child{
+  border-right: none;
+  border-bottom: none;
 }
 
 .roboto-font{
@@ -626,17 +659,12 @@ body {
 }
 
 
-@media screen and (max-width: 1600px){
-  .projects-img-container img{
-    height: 265px;
-  }
-
-  .projects-img-container{
-    min-height:300px ;
-  }
-}
 
 @media screen and (max-width: 600px) {
+  .mw95-center{
+    max-width: 100%;
+  }
+
   .navigation-container li{
     color: white;
   }
@@ -687,12 +715,7 @@ body {
 
   .projects-img-container img {
     width: 100%;
-    height: initial;
-    object-fit: contain;
-  }
-
-  .projects-img-container,.mh-380{
-    min-height:initial;
+    height: auto;
   }
 
   .projects-img-container{

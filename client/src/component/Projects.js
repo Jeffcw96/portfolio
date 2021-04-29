@@ -6,7 +6,7 @@ export default function Projects({ projectsRef }) {
     return (
         <div className="projects-section" ref={projectsRef}>
             <h2 className="section-header">Projects</h2>
-            <div className="flex flex-wrap space-between">
+            <div className="flex flex-wrap space-between mw95-center mt-50">
                 {projects.map((project, ind) => (
                     <div className="project-showcase" key={ind}>
                         <Project project={project} />

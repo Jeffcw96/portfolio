@@ -120,7 +120,8 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-            <div ref={projectsRef} id="projects">
+            <div style={{ position: 'relative' }}>
+                <div style={{ position: 'absolute', top: '-50px', height: '10px', width: '100%' }} id="projects" ref={projectsRef}></div>
                 <Projects />
             </div>
             <div ref={contactRef} style={{ overflow: "hidden" }} id="contact">

@@ -4,26 +4,23 @@ import { Link, useHistory } from 'react-router-dom'
 export default function Project({ project }) {
     const history = useHistory()
     const defaultImg = require("../static/data/showcase/" + project.img).default
-    const hoverImg = require("../static/data/showcase/" + project.hoverImg).default
-    const [img, setImg] = useState(defaultImg)
+    // const hoverImg = require("../static/data/showcase/" + project.hoverImg).default
+    const [hover, setHover] = useState(false)
 
     return (
-        <div className="flex flex-column space-between mh-380 transition-fade" >
-            <div className="projects-img-container">
-                <img src={img} onMouseEnter={() => { setImg(hoverImg) }}
-                    onMouseLeave={() => { setImg(defaultImg) }}
+        <div className="flex flex-column space-between transition-fade" >
+            <div className={`projects-img-container ${hover ? 'hover-active' : null}`}
+                onMouseEnter={() => { setHover(true) }}
+                onMouseLeave={() => { setHover(false) }}>
+                <img src={defaultImg}
                     onClick={() => history.push({
                         pathname: "/project/" + project.id
                     })} />
+                <div class="on-hover-project-container">
+                    <div>Learn More</div>
+                </div>
             </div>
-            <div>
-                <p style={{ marginBottom: "10px" }} className="roboto-font">{project.projectName}</p>
-                <p className="roboto-font light">{project.description}... <br />
-                    <Link to={"/project/" + project.id}>
-                        Learn more
-                    </Link>
-                </p>
-            </div>
+
         </div>
     )
 }
