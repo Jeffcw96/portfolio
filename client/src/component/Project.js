@@ -17,7 +17,12 @@ export default function Project({ project }) {
                         pathname: "/project/" + project.id
                     })} />
                 <div class="on-hover-project-container">
-                    <div>Learn More</div>
+                    <div className="project-hover-detail-container-left">
+                        <div className="project-hover-detail-left">Learn</div>
+                    </div>
+                    <div className="project-hover-detail-container-right">
+                        <div className="project-hover-detail-right">More</div>
+                    </div>
                 </div>
             </div>
 

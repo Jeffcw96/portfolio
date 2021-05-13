@@ -70,8 +70,11 @@ export default function Main() {
         }
 
         return () => {
-            navbarElement.current.classList.remove("mobile-active");
-            document.body.style.overflow = "initial"
+            if (navbarElement.current) {
+                navbarElement.current.classList.remove("mobile-active");
+                document.body.style.overflow = "initial"
+            }
+
         }
     }, [mobileNavVisible])
 
