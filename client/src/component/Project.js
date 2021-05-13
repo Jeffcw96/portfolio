@@ -12,20 +12,22 @@ export default function Project({ project }) {
             <div className={`projects-img-container ${hover ? 'hover-active' : null}`}
                 onMouseEnter={() => { setHover(true) }}
                 onMouseLeave={() => { setHover(false) }}>
-                <img src={defaultImg}
-                    onClick={() => history.push({
-                        pathname: "/project/" + project.id
-                    })} />
+                <img src={defaultImg} />
                 <div class="on-hover-project-container">
                     <div className="project-hover-detail-container-left">
-                        <div className="project-hover-detail-left">Learn</div>
+                        <div className="project-hover-detail-left"
+                            onClick={() => history.push({
+                                pathname: "/project/" + project.id
+                            })}>Learn</div>
                     </div>
                     <div className="project-hover-detail-container-right">
-                        <div className="project-hover-detail-right">More</div>
+                        <div className="project-hover-detail-right"
+                            onClick={() => history.push({
+                                pathname: "/project/" + project.id
+                            })}>More</div>
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

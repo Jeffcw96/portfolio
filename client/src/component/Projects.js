@@ -1,5 +1,6 @@
 import React from 'react'
 import Project from './Project'
+import ProjectDetailsModal from './ProjectDetailsModal'
 import projects from '../static/data/projects.json'
 
 export default function Projects({ projectsRef }) {
@@ -13,7 +14,7 @@ export default function Projects({ projectsRef }) {
                     </div>
                 ))}
             </div>
-
+            <ProjectDetailsModal />
         </div>
     )
 }
