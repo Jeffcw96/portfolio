@@ -23,26 +23,15 @@ export default function ProjectDetailsModal({ active, closeModal }) {
         }
     }
 
-
-
-
-
     return (
         <div id="myModal" className={`modal ${active ? 'active' : ''}   `}>
             <div className="modal-content">
-                <div className="flex space-between" style={{ alignItems: 'center' }}>
-                    <h3>Title</h3>
-                    <div className="close" onClick={closeModal}>&times;</div>
-                </div>
                 {
                     projectDetailsInfo !== null ?
                         <div className="project-detail-page">
                             <Helmet>
                                 <link rel="prefetch" href={projectDetailsInfo.slug} />
                             </Helmet>
-                            <div style={{ textAlign: 'center' }}>
-                                <h1 className='project-detail-title'>{projectDetailsInfo.projectName}</h1>
-                            </div>
                             <div className="project-detail-slider-container" style={{ display: "flex" }}>
                                 <Swiper
                                     id="main"
@@ -58,26 +47,33 @@ export default function ProjectDetailsModal({ active, closeModal }) {
                                         console.log('Slide index changed to: ', swiper.activeIndex);
                                     }}
                                     onReachEnd={() => console.log('Swiper end reached')}
-                                    style={{ width: '90%' }}
                                 >
                                     {slides}
                                 </Swiper>
                             </div>
-                            <div className="project-detail-descriptions-container">
-                                <div className="project-detail-component"><span>Descriptions :</span>
-                                    <span>{projectDetailsInfo.descriptions.map(description => (
-                                        <div style={{ marginBottom: "5px" }}>{description}</div>
-                                    ))}</span>
+                            <div className="px-3">
+                                <div className="flex space-between" style={{ alignItems: 'center' }}>
+                                    <div className='project-detail-title'>{projectDetailsInfo.projectName}</div>
                                 </div>
-                                <div className="project-detail-component" ><span>Tags :</span>
-                                    <div className="project-tag-container">
-                                        {projectDetailsInfo.tags.map(tagInfo => (
-                                            <span className="project-detail-tag" style={{ backgroundColor: tagInfo.backgroundColor, color: tagInfo.color }}>{tagInfo.tag}</span>
-                                        ))}
+                                <div className="project-detail-descriptions-container">
+                                    <div className="project-detail-component">
+                                        <span>{projectDetailsInfo.descriptions}</span>
+                                    </div>
+                                    <div className="project-detail-component" ><span>Tags :</span>
+                                        <div className="project-tag-container">
+                                            {projectDetailsInfo.tags.map(tagInfo => (
+                                                <span className="project-detail-tag" style={{ backgroundColor: tagInfo.backgroundColor, color: tagInfo.color }}>{tagInfo.tag}</span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div class="call-to-action-container">
+                                        <div class="call-to-action">
+                                            <a href={projectDetailsInfo.slug} target="_blank"><div>View Project</div></a>
+                                            <a href={projectDetailsInfo.source} target="_blank"><div>Source Code</div></a>
+                                        </div>
+                                        <div className="close" onClick={closeModal}>&times;</div>
                                     </div>
                                 </div>
-                                <div className="project-detail-component"><span>Demo at : </span><a href={projectDetailsInfo.slug} target="_blank">{projectDetailsInfo.slug}</a></div>
-                                <div className="project-detail-component"><span>Source code : </span><a href={projectDetailsInfo.source} target="_blank">{projectDetailsInfo.source}</a></div>
                             </div>
                         </div> :
                         ""

@@ -25,7 +25,8 @@ export default function Project({ project, openModal }) {
                             onClick={() => openProjectModal(project.id)}>Learn</div>
                     </div>
                     <div className="project-hover-detail-container-right">
-                        <div className="project-hover-detail-right">More</div>
+                        <div className="project-hover-detail-right"
+                            onClick={() => openProjectModal(project.id)}>More</div>
                     </div>
                 </div>
             </div>
