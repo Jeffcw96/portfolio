@@ -8,8 +8,8 @@ export function useProjectDetails() {
 
 export function ProjectDetailsProvider({ children }) {
     const [projectId, setProjectId] = useState(1);
-    const [projectDetailsInfo, setProjectDetailsInfo] = useState()
-    const [projectDetailsImages, setProjectDetailsImages] = useState()
+    const [projectDetailsInfo, setProjectDetailsInfo] = useState(null)
+    const [projectDetailsImages, setProjectDetailsImages] = useState(null)
 
     useEffect(() => {
         const projectInfo = require("../static/data/projects/" + projectId + "/project.json")
@@ -21,13 +21,14 @@ export function ProjectDetailsProvider({ children }) {
         setProjectDetailsInfo(projectInfo);
         setProjectDetailsImages(projectImages);
 
+
     }, [projectId])
 
 
     const value = {
         setProjectId: setProjectId,
         projectDetailsInfo: projectDetailsInfo,
-        projectDetailsImages: projectDetailsImages
+        projectDetailsImages: projectDetailsImages,
     }
 
     return (

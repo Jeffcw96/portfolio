@@ -110,14 +110,14 @@ export default function Main() {
             <div ref={aboutRef} id="about">
                 {/* <About /> */}
                 <div className="parallax" style={{ backgroundImage: `url(${main})` }}>
-                    <div class='intro'>
+                    <div className='intro'>
                         <h1>Hello, I'm <span>Jeff Chang</span>. <br />I'm a full-stack web developer</h1>
                     </div>
-                    <div class="view-project">
+                    <div className="view-project">
                         <Link to="projects" smooth={true} duration={500}>
                             <h2>View my work</h2>
-                            <svg class="arrows">
-                                <path stroke-linecap="round" class="a1" d="M0 0 L20 22 L40 0"></path>
+                            <svg className="arrows">
+                                <path strokeLinecap="round" className="a1" d="M0 0 L20 22 L40 0"></path>
                             </svg>
                         </Link>
                     </div>
