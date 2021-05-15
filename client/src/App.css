@@ -56,13 +56,49 @@ body {
   display: block;
 }
 
+.call-to-action-text{
+  color: black;
+}
+
 .call-to-action div{
   border: 1px solid black;
   padding: 10px 20px;
   text-transform: uppercase;
   font-weight: bold;
   margin-right: 10px;
+  border-radius: 5px;
+  transition: all .45s;
 }
+
+.call-to-action div:hover{
+  background-color: black;
+}
+
+.call-to-action div:hover .call-to-action-text{
+  color: white;
+}
+
+.call-to-action div:hover .view-live-icon{
+  fill: white;
+  stroke: white;
+}
+
+
+.view-live-icon {
+  fill: #000;
+  stroke: #000;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.view-live-icon svg { 
+  --size: 1rem;
+  fill: inherit;
+  min-height: 5px;
+  min-width:  15px;
+}
+
 
 
 .project-hover-detail-left{
@@ -131,6 +167,8 @@ body {
 .px-3{
   padding: 0 15px;
 }
+
+
 
 .modal.active{
   display: block;
@@ -781,6 +819,9 @@ body {
 
 .project-detail-title{
   font-size: 2rem;
+  margin-top: 15px;
+  border-bottom: 2px solid #8e8a8a;
+  padding-bottom: 5px;
 }
 .project-detail-page{
   padding-bottom: 15px;
@@ -807,17 +848,17 @@ body {
     display: block;
   }
   .project-detail-descriptions-container{
-    margin-top: 25px;
-    padding: 0 10px
+    margin-top: 5px
+  }
+
+  .project-detail-component{
+    margin: 10px 0;
   }
 
   .project-detail-component{
     font-size: 0.9rem;
     justify-content: space-between;
     line-height: 1.5;
-  }
-  .swiper-button-prev::after, .swiper-button-next::after, #thumbs{
-    display: none;
   }
 
   .contact-icon.linkedin,.contact-icon.github{
@@ -888,7 +929,7 @@ body {
 
 
   .project-detail-component span:last-child, .project-detail-component a, .project-tag-container{
-    width: 75%;
+    width: 100%;
   }
 
   .to-home-page-icon {
