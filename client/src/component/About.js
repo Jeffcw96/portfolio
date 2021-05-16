@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
 import Typewriter from 'typewriter-effect'
 import profilePic from '../static/images/profile.png'
 

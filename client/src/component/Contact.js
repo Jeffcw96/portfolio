@@ -109,10 +109,10 @@ export default function Contact({ contactRef, visible, iconLoad }) {
             </form>
 
             <a href={GITHUB_LINK} target="_blank">
-                <img src={githubImg} className={`contact-icon github ${iconLoad ? 'active' : null}`} />
+                <img src={githubImg} className={`contact-icon github ${iconLoad ? 'active' : null}`} alt="github link" />
             </a>
             <a href={LINKEDIN_LINK} target="_blank">
-                <img src={linkedinImg} className={`contact-icon linkedin ${iconLoad ? 'active' : null}`} />
+                <img src={linkedinImg} className={`contact-icon linkedin ${iconLoad ? 'active' : null}`} alt="linkedin link" />
             </a>
 
 

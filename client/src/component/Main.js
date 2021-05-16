@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import Projects from './Projects'
-import About from './About'
 import Contact from './Contact'
 import '../App.css'
 import main from '../static/main-img.jpg'
@@ -14,7 +13,6 @@ function useOnScreen(options) {
 
     useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
-            console.log("entry.isIntersecting", entry.isIntersecting)
             setVisible(entry.isIntersecting)
         }, options)
 

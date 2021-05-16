@@ -18,7 +18,7 @@ export default function Project({ project, openModal }) {
             <div className={`projects-img-container ${hover ? 'hover-active' : null}`}
                 onMouseEnter={() => { setHover(true) }}
                 onMouseLeave={() => { setHover(false) }}>
-                <img src={defaultImg} />
+                <img src={defaultImg} alt="projects" />
                 <div className="on-hover-project-container">
                     <div className="project-hover-detail-container-left">
                         <div className="project-hover-detail-left"

@@ -10,8 +10,6 @@ SwiperCore.use([Navigation, Pagination, Controller, Thumbs, Autoplay]);
 export default function ProjectDetailsModal({ active, closeModal }) {
     const { projectDetailsInfo, projectDetailsImages } = useProjectDetails();
     let slides = [];
-    console.log("projectDetailsInfo", projectDetailsInfo, 'projectDetailsImage', projectDetailsImages)
-    console.log("activeee", active)
 
     if (projectDetailsImages !== null && projectDetailsImages.length !== 0) {
         for (let i = 0; i < projectDetailsImages.length; i++) {
