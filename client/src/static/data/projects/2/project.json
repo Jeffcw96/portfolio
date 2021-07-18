@@ -16,37 +16,31 @@
     ],
     "tags": [
         {
-            "icon": "vue.png",
+            "icon": "react.svg",
             "tag": "React",
             "backgroundColor": "#000000",
             "color": "#09D9FD"
         },
         {
-            "icon": "vue.png",
+            "icon": "nodejs.svg",
             "tag": "Nodejs",
             "backgroundColor": "#44883E",
             "color": "#FFFFFF"
         },
         {
-            "icon": "vue.png",
-            "tag": "Express",
-            "backgroundColor": "#F7DF1E",
-            "color": "#000000"
-        },
-        {
-            "icon": "vue.png",
+            "icon": "mongodb.png",
             "tag": "MongoDB",
             "backgroundColor": "#4AA64A",
             "color": "#474749"
         },
         {
-            "icon": "vue.png",
+            "icon": "amazon.png",
             "tag": "AWS",
             "backgroundColor": "#EF931E",
             "color": "#FFFFFF"
         },
         {
-            "icon": "vue.png",
+            "icon": "google.png",
             "tag": "Google OAuth",
             "backgroundColor": "#E34133",
             "color": "#FFFFFF"

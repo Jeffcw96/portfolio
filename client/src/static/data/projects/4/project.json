@@ -13,13 +13,13 @@
     ],
     "tags": [
         {
-            "icon": "vue.png",
+            "icon": "golang.png",
             "tag": "Go",
             "backgroundColor": "#7FD5EA",
             "color": "#000000"
         },
         {
-            "icon": "vue.png",
+            "icon": "redis.png",
             "tag": "Redis",
             "backgroundColor": "#D12B1F",
             "color": "#FFFFFF"

@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination, Controller, Thumbs, Autoplay } from 'swiper'
 import 'swiper/swiper-bundle.css'
-import backIcon from '../static/images/back-arrow.svg'
+import '../App.css'
 
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs, Autoplay]);
 export default function ProjectDetailsModal({ active, closeModal }) {
@@ -52,11 +52,28 @@ export default function ProjectDetailsModal({ active, closeModal }) {
                                         <span>{projectDetailsInfo.descriptions}</span>
                                     </div>
                                     <div className="project-detail-component" ><span style={{ marginRight: '10px' }}>Tags: </span>
-                                        <div className="project-tag-container">
+                                        <div className="project-tag-container" style={{ display: 'flex', flexWrap: 'wrap' }}>
                                             {projectDetailsInfo.tags.map((tagInfo, ind) => (
-                                                <span key={ind} className="project-detail-tag" style={{ backgroundColor: tagInfo.backgroundColor, color: tagInfo.color }}>
-                                                    <img src={"/icon/" + tagInfo.icon} style={{ maxWidth: '15px' }} />
-                                                    {tagInfo.tag}
+                                                <span key={ind} className="project-detail-tag"
+                                                    style={{
+                                                        backgroundColor: tagInfo.backgroundColor,
+                                                        color: tagInfo.color,
+                                                        display: 'flex',
+                                                        justifyContent: 'space-between',
+                                                        alignItems: "center"
+                                                    }}>
+                                                    <div style={{
+                                                        maxWidth: '20px',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        marginRight: '5px'
+                                                    }}
+                                                    >
+                                                        <img src={"/icon/" + tagInfo.icon} style={{ width: '100%' }} />
+                                                    </div>
+                                                    <div>
+                                                        {tagInfo.tag}
+                                                    </div>
                                                 </span>
                                             ))}
                                         </div>

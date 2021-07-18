@@ -13,14 +13,6 @@ export function ProjectDetailsProvider({ children }) {
 
     useEffect(() => {
         let projectInfo = require("../static/data/projects/" + projectId + "/project.json")
-
-        // const filteredTagsWithIcons = projectInfo.tags.map(tag => {
-        //     console.log(`require("../static/images/icon/" + tag.icon)`, require("../static/images/icon/" + tag.icon))
-        //     const iconUrl = require("../static/images/icon/" + tag.icon).default
-        //     console.log("icon URL", iconUrl)
-        //     return { ...tag, icon: iconUrl }
-        // })
-        // projectInfo.tags = filteredTagsWithIcons
         const projectImages = projectInfo.images.map(image => {
             return require("../static/data/projects/" + projectId + "/images/" + image).default
         })
