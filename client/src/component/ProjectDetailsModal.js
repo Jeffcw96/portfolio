@@ -10,7 +10,7 @@ SwiperCore.use([Navigation, Pagination, Controller, Thumbs, Autoplay]);
 export default function ProjectDetailsModal({ active, closeModal }) {
     const { projectDetailsInfo, projectDetailsImages } = useProjectDetails();
     let slides = [];
-
+    console.log("projectDetailsInfo", projectDetailsInfo)
     if (projectDetailsImages !== null && projectDetailsImages.length !== 0) {
         for (let i = 0; i < projectDetailsImages.length; i++) {
             slides.push(
@@ -54,7 +54,10 @@ export default function ProjectDetailsModal({ active, closeModal }) {
                                     <div className="project-detail-component" ><span style={{ marginRight: '10px' }}>Tags: </span>
                                         <div className="project-tag-container">
                                             {projectDetailsInfo.tags.map((tagInfo, ind) => (
-                                                <span key={ind} className="project-detail-tag" style={{ backgroundColor: tagInfo.backgroundColor, color: tagInfo.color }}>{tagInfo.tag}</span>
+                                                <span key={ind} className="project-detail-tag" style={{ backgroundColor: tagInfo.backgroundColor, color: tagInfo.color }}>
+                                                    <img src={"/icon/" + tagInfo.icon} style={{ maxWidth: '15px' }} />
+                                                    {tagInfo.tag}
+                                                </span>
                                             ))}
                                         </div>
                                     </div>

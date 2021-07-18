@@ -11,11 +11,13 @@
     ],
     "tags": [
         {
+            "icon": "vue.png",
             "tag": "Vuejs",
             "backgroundColor": "#4FC08D",
             "color": "#FFFFFF"
         },
         {
+            "icon": "vue.png",
             "tag": "Nodejs",
             "backgroundColor": "#44883E",
             "color": "#FFFFFF"
