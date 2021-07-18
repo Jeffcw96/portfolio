@@ -1,5 +1,12 @@
 [
     {
+        "id": 5,
+        "projectName": "Travel Kaki",
+        "img": "multilocation.jpg",
+        "hoverImg": "finance.gif",
+        "description": "My very first try on Golang and ChartJs"
+    },
+    {
         "id": 1,
         "projectName": "Jeff's Blog",
         "img": "blog.jpg",
