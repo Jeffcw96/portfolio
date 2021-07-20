@@ -1,0 +1,30 @@
+module.exports = {
+    "id": 4,
+    "projectName": "Daily Expenses Tracker",
+    "images": [
+        "top-section.jpg",
+        "add_expenses.jpg",
+        "statistic.jpg",
+        "summary.jpg"
+    ],
+    "descriptions": [
+        "This is my very first side project which helps me to familiar my full-time job stack which are Go and Redis",
+        "It also uses ChartJs library to dynamically generate and visualize the data in graphical manner."
+    ],
+    "tags": [
+        {
+            "icon": "golang.png",
+            "tag": "Go",
+            "backgroundColor": "#7FD5EA",
+            "color": "#000000"
+        },
+        {
+            "icon": "redis.png",
+            "tag": "Redis",
+            "backgroundColor": "#D12B1F",
+            "color": "#FFFFFF"
+        }
+    ],
+    "slug": "https://jeff-finance-app.herokuapp.com/",
+    "source": "https://github.com/Jeffcw96/FInancial-statistic-web-app"
+}

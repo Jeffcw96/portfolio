@@ -12,7 +12,7 @@ export function ProjectDetailsProvider({ children }) {
     const [projectDetailsImages, setProjectDetailsImages] = useState(null)
 
     useEffect(() => {
-        let projectInfo = require("../static/data/projects/" + projectId + "/project.json")
+        let projectInfo = require("../static/data/projects/" + projectId + "/project.js")
         const projectImages = projectInfo.images.map(image => {
             return require("../static/data/projects/" + projectId + "/images/" + image).default
         })

@@ -1,0 +1,51 @@
+module.exports = {
+    "id": 2,
+    "projectName": "Connect You & Me",
+    "images": [
+        "login_screen.jpg",
+        "google_login.jpg",
+        "web_chat.jpg",
+        "add_contact.jpg",
+        "profile.jpg"
+    ],
+    "descriptions": [
+        "The purpose of creating this project is to understand how socket actually work between our client and server",
+        "It was created by using MERN stack. Other than that, some API such as AWS S3, AWS SES and Google Login also being integrated into this project",
+        "Throughout this project creation, I also managed to understand more on React Hooks such as useReducer and useContext for managing the complex state.",
+        "I also figured out it was quite easy to integrate the cloud technologies from AWS into our custom application"
+    ],
+    "tags": [
+        {
+            "icon": "react.svg",
+            "tag": "React",
+            "backgroundColor": "#000000",
+            "color": "#09D9FD"
+        },
+        {
+            "icon": "nodejs.svg",
+            "tag": "Nodejs",
+            "backgroundColor": "#44883E",
+            "color": "#FFFFFF"
+        },
+        {
+            "icon": "mongodb.png",
+            "tag": "MongoDB",
+            "backgroundColor": "#4AA64A",
+            "color": "#474749"
+        },
+        {
+            "icon": "amazon.png",
+            "tag": "AWS",
+            "backgroundColor": "#EF931E",
+            "color": "#FFFFFF"
+        },
+        {
+            "icon": "google.png",
+            "tag": "Google OAuth",
+            "backgroundColor": "#E34133",
+            "color": "#FFFFFF"
+        }
+    ],
+    "slug": "https://jeffchatapp.herokuapp.com/",
+    "source": "https://github.com/Jeffcw96/mern-chat-app"
+}

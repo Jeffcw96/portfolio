@@ -13,7 +13,8 @@ export default function ProjectDetails({ match }) {
     let slides = [];
     let thumbs = []
     const projectId = match.params.id
-    const projectInfo = require("../static/data/projects/" + projectId + "/project.json");
+
+    const projectInfo = require("../static/data/projects/" + projectId + "/project.js");
     const projectImages = projectInfo.images.map(image => {
         return require("../static/data/projects/" + projectId + "/images/" + image).default
     })
@@ -88,9 +89,9 @@ export default function ProjectDetails({ match }) {
             </div>
             <div className="project-detail-descriptions-container">
                 <div className="project-detail-component"><span>Descriptions :</span>
-                    <span>{projectInfo.descriptions.map(description =>(
-                        <div style={{marginBottom:"5px"}}>{description}</div>
-                    ))}</span>                    
+                    <span>{projectInfo.descriptions.map(description => (
+                        <div style={{ marginBottom: "5px" }}>{description}</div>
+                    ))}</span>
                 </div>
                 <div className="project-detail-component" ><span>Tags :</span>
                     <div className="project-tag-container">
@@ -98,7 +99,7 @@ export default function ProjectDetails({ match }) {
                             <span className="project-detail-tag" style={{ backgroundColor: tagInfo.backgroundColor, color: tagInfo.color }}>{tagInfo.tag}</span>
                         ))}
                     </div>
-                </div>                
+                </div>
                 <div className="project-detail-component"><span>Demo at : </span><a href={projectInfo.slug} target="_blank">{projectInfo.slug}</a></div>
                 <div className="project-detail-component"><span>Source code : </span><a href={projectInfo.source} target="_blank">{projectInfo.source}</a></div>
             </div>
