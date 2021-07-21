@@ -30,8 +30,8 @@
         {
             "icon": "mongodb.png",
             "tag": "MongoDB",
-            "backgroundColor": "#4AA64A",
-            "color": "#474749"
+            "backgroundColor": "#FFE77B",
+            "color": "#000000"
         },
         {
             "icon": "amazon.png",

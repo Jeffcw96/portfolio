@@ -9,9 +9,7 @@ module.exports = {
         "payment3.jpg"
     ],
     "descriptions": [
-        "This is my very first MERN stack project which gets me understand the basicc React Hooks like useState, useEffect, useRef and etc",
-        "The intention of doing this project is to gets my hand dirty into React framework as it's becoming more and more popular in the front-end devs",
-        "I was managed to understand how React Router works as well as integrate a Paypal Payment into this application"
+        "A Product Landing Page with Paypal Integration. as well as animation with ChartJs framework",
     ],
     "tags": [
         {
@@ -29,8 +27,8 @@ module.exports = {
         {
             "icon": "mongodb.png",
             "tag": "MongoDB",
-            "backgroundColor": "#4AA64A",
-            "color": "#474749"
+            "backgroundColor": "#FFE77B",
+            "color": "#000000"
         }
     ],
     "slug": "https://musicmernstackapp.herokuapp.com/",

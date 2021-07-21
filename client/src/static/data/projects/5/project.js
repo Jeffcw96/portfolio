@@ -13,7 +13,7 @@ module.exports = {
         {
             "icon": "vue.png",
             "tag": "Vuejs",
-            "backgroundColor": "#4FC08D",
+            "backgroundColor": "#218c5b",
             "color": "#FFFFFF"
         },
         {

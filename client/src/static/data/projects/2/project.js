@@ -9,10 +9,9 @@ module.exports = {
         "profile.jpg"
     ],
     "descriptions": [
-        "The purpose of creating this project is to understand how socket actually work between our client and server",
-        "It was created by using MERN stack. Other than that, some API such as AWS S3, AWS SES and Google Login also being integrated into this project",
-        "Throughout this project creation, I also managed to understand more on React Hooks such as useReducer and useContext for managing the complex state.",
-        "I also figured out it was quite easy to integrate the cloud technologies from AWS into our custom application"
+        "This application allows to chat individually as well as collectively.",
+        " It was created by using MERN stack. Other than that, some API such as AWS S3, AWS SES and Google Login also being integrated into this project.",
+        " It also allow the user to upload their profile picture so that, it will be easily to recognize in their friend list",
     ],
     "tags": [
         {
@@ -30,8 +29,8 @@ module.exports = {
         {
             "icon": "mongodb.png",
             "tag": "MongoDB",
-            "backgroundColor": "#4AA64A",
-            "color": "#474749"
+            "backgroundColor": "#FFE77B",
+            "color": "#000000"
         },
         {
             "icon": "amazon.png",
@@ -42,7 +41,7 @@ module.exports = {
         {
             "icon": "google.png",
             "tag": "Google OAuth",
-            "backgroundColor": "#E34133",
+            "backgroundColor": "#000000",
             "color": "#FFFFFF"
         }
     ],

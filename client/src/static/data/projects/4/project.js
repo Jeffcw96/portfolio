@@ -8,8 +8,7 @@ module.exports = {
         "summary.jpg"
     ],
     "descriptions": [
-        "This is my very first side project which helps me to familiar my full-time job stack which are Go and Redis",
-        "It also uses ChartJs library to dynamically generate and visualize the data in graphical manner."
+        "A simple expenses tracker app that allows you to categorize different type of expenses and visualize it in graphical manner"
     ],
     "tags": [
         {
@@ -21,7 +20,7 @@ module.exports = {
         {
             "icon": "redis.png",
             "tag": "Redis",
-            "backgroundColor": "#D12B1F",
+            "backgroundColor": "#ef5681",
             "color": "#FFFFFF"
         }
     ],
