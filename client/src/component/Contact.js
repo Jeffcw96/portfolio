@@ -9,10 +9,11 @@ export default function Contact({ contactRef, visible, iconLoad }) {
     const USER_ID = 'user_QRzuQF5Ef39qfTkF9KVDN'
     const GITHUB_LINK = 'https://github.com/Jeffcw96'
     const LINKEDIN_LINK = 'https://www.linkedin.com/in/jeff-chang-7461b119a/'
-
-    const [contactInfo, setContactInfo] = useState({
+    const initialContactInfo = {
         name: "", email: "", subject: "", message: ""
-    })
+    }
+
+    const [contactInfo, setContactInfo] = useState(initialContactInfo)
 
     const [errorMessage, setErrorMessage] = useState({
         name: "", email: "", subject: "", message: ""
@@ -28,9 +29,10 @@ export default function Contact({ contactRef, visible, iconLoad }) {
             if (!validContactInput) {
                 return
             }
-            const result = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-            console.log("send email result", result)
-            e.target.reset()
+            await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+            setSuccessMsg("Your email has been successfully sent")
+            setContactInfo(initialContactInfo)
+
         } catch (error) {
             console.error("error", error)
         }

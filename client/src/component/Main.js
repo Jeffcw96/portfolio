@@ -109,7 +109,7 @@ export default function Main() {
                 {/* <About /> */}
                 <div className="parallax" style={{ backgroundImage: `url(${main})` }}>
                     <div className='intro'>
-                        <h1>Hello, I'm <span>Jeff Chang</span>. <br />I'm a full-stack web developer</h1>
+                        <h1>Hello, I'm <span>Jeff Chang</span>. <br />I'm a full-stack developer</h1>
                     </div>
                     <div className="view-project">
                         <Link to="projects" smooth={true} duration={500}>
