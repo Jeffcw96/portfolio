@@ -73,7 +73,7 @@ export default function Contact({ contactRef, visible, iconLoad }) {
 
     return (
         <div style={{ minHeight: '80vh', background: "rgb(246 246 246)" }} className="projects-section contact-page" ref={contactRef}>
-            <h2 className="section-header">Contact</h2>
+            <h2 className="section-header">Contact Me</h2>
             <form onSubmit={contactMe}>
                 <div>
                     <div className="contact-form">
