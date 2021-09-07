@@ -4,6 +4,10 @@ import Projects from './Projects'
 import Contact from './Contact'
 import '../App.css'
 import main from '../static/main-img.jpg'
+import bitmoji from '../static/bitmoji.png'
+import bitmoji2 from '../static/bitmoji_2.png'
+import codeIconBlack from '../static/images/code-icon-black.svg'
+import codeIconWhite from '../static/images/code-icon-white.svg'
 import { Link, Events } from 'react-scroll'
 
 function useOnScreen(options) {
@@ -30,12 +34,15 @@ function useOnScreen(options) {
     return [setRef, visible]
 }
 
+
+
 export default function Main() {
     const location = useLocation()
     const [setRef, visible] = useOnScreen({ threshold: 1, rootMargin: "0px 0px 150px 0px" })
     const [mobileNavVisible, setMobileNavVisible] = useState(false)
     const [iconLoad, setIconLoad] = useState(false)
     const [navbar, setNavbar] = useState(false)
+    const [fade, setFade] = useState(false)
     const aboutRef = useRef()
     const projectsRef = useRef()
     const contactRef = useRef()
@@ -99,6 +106,9 @@ export default function Main() {
                 </div>
             </div>
             <div className={navbar ? 'navigation-header active' : 'navigation-header'} ref={navbarElement}>
+                <div class="nav-icon">
+                    <img src={navbar ? codeIconWhite : codeIconBlack} style={{ width: '100%' }} />
+                </div>
                 <ul className="navigation-container">
                     <li><Link to="about" smooth={true} duration={1000} >About Me</Link></li>
                     <li><Link to="projects" smooth={true} duration={1000} >Projects</Link></li>
@@ -107,8 +117,19 @@ export default function Main() {
             </div>
             <div ref={aboutRef} id="about">
                 {/* <About /> */}
-                <div className="parallax" style={{ backgroundImage: `url(${main})` }}>
-                    <div className='intro'>
+                <div className="parallax">
+                    <div className='bitmoji-container'>
+                        <img src={bitmoji} className='bitmoji' />
+                    </div>
+                    <div className={'bitmoji-2-container ' + (fade ? "fade" : '')}>
+                        <div className={"dialog " + (fade ? "fade" : '')} >
+                            I can build whatever you need !
+                            <div className="left-point"></div>
+                        </div>
+                        <img src={bitmoji2} className='bitmoji' />
+                    </div>
+                    <div className={'intro-animation-container ' + (fade ? "fade" : '')} onAnimationEnd={() => { setFade(true) }}></div>
+                    <div className={'intro ' + (fade ? "fade" : '')}>
                         <h1>Hello, I'm <span>Jeff Chang</span>. <br />I'm a full-stack developer</h1>
                     </div>
                     <div className="view-project">
